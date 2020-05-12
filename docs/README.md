@@ -1,8 +1,8 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
+heroText: 知道的，记不住，就记下来
+tagline: 书山有路勤为径，学海无涯苦作舟
 actionText: 现在开始 →
 actionLink: /develop
 features:

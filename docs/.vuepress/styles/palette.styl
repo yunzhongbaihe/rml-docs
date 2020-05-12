@@ -1,9 +1,40 @@
-.theme-default-content:not(.custom){
+.theme-default-content:not(.custom) {
+  padding: 2rem 1rem
   max-width 100%
 }
 
+.navbar
+  padding 0.75rem 1rem
+  height: 60px
+
 .home
+  padding: 60px 1rem 50px
   max-width 100%
 
 a.header-anchor
   display none
+
+body
+  font-family "宋体"
+
+.sidebar-heading
+  padding-top: 0
+  padding-bottom: 0
+
+.sidebar-heading.clickable.active,
+a.sidebar-link.active
+  color: #0088EE
+  border-left-color: #0088EE
+
+.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active
+  color: #0088EE
+  border-bottom-color: #0088EE
+
+.home .footer
+  position: fixed
+  bottom: 0
+  left: 0
+  padding: 0
+  width: 100%
+  line-height: 49px
+  background-color: #fff;
