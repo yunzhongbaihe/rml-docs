@@ -35,7 +35,7 @@
 		name: 'home'
 	}
 </script>
-<script lang="styl" scope>
+<script lang="styl" scoped>
     .home .features
         display: flex
         justify-content: space-around
