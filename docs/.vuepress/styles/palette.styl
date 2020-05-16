@@ -1,7 +1,19 @@
-.theme-default-content:not(.custom) {
+*
+  margin: 0
+  padding: 0
+  
+a
+  color: #0088EE
+
+.theme-default-content:not(.custom)
   padding: 2rem 1rem
   max-width 100%
-}
+
+.sidebar
+  width: 200px
+
+.page
+  padding-left: 200px
 
 .navbar
   padding 0.75rem 1rem
@@ -15,11 +27,14 @@ a.header-anchor
   display none
 
 body
-  font-family "宋体"
+  font-family: 'Fira Code Light', 'Courier New', Courier, monospace;
 
 .sidebar-heading
   padding-top: 0
   padding-bottom: 0
+  line-height: 30px
+  padding-left: 10px
+  padding-right: 10px
 
 .sidebar-heading.clickable.active,
 a.sidebar-link.active
@@ -38,3 +53,39 @@ a.sidebar-link.active
   width: 100%
   line-height: 49px
   background-color: #fff;
+
+.sidebar > .sidebar-links > li:not(:first-child)
+  margin-top: 0 !important
+
+.sidebar > .sidebar-links
+  padding: 10px 0 !important
+
+.sidebar-group li {
+  line-height: 30px
+}
+
+.sidebar-group a.sidebar-link
+  display: block
+  padding-top: 0
+  padding-bottom: 0
+  line-height: 30px
+  padding-left: 2em
+  padding-right: 0.5em
+
+.theme-default-content > h1:first-child
+  margin-bottom: 0 !important
+  line-height: 40px
+
+.page-nav
+  display: none
+  padding: 0
+  max-width: inherit
+  line-height: 30px
+
+.page-nav .inner
+  padding: 0
+  margin: 0
+
+.navbar .links
+  left: 1rem
+  padding-left: 0

@@ -6,11 +6,14 @@ tagline: 书山有路勤为径，学海无涯苦作舟
 actionText: 现在开始 →
 actionLink: /develop
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+# - title: 浪淘沙
+  # details: 莫道谗言如浪深，莫言迁客似沙沉。千淘万漉虽辛苦，吹尽狂沙始到金。
+# - title: 劝学
+  # details: 三更灯火五更鸡，正是男儿发愤时。黑发不知勤学早，白首方悔读书迟。
+# - title: 雪梅
+  # details: 梅雪争春未肯降，骚人搁笔费评章。梅须逊雪三分白，雪却输梅一段香。
+# - title: 长歌行
+  # details: 百川东到海，何时复西归？少壮不努力，老大徒伤悲。
 footer: yunzhongbaihe | 云中白鹤
 ---
+<home/>
