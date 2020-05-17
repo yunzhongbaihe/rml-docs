@@ -28,6 +28,7 @@ module.exports = {
 		// 侧边栏
 		sidebar: [
 			['/webpack', 'Webpack'],
+			['/react', 'React'],
 			{
 				title: '弹框',   // 必要的
 				path: '/layer/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
