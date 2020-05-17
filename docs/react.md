@@ -34,3 +34,7 @@ class App extends Component{
 }
 export default App;
 ```
+> 数据的改变
+```jsx harmony
+this.setState({'需要改变值的名称':'新值'});
+```
