@@ -8,7 +8,7 @@
 ![webpack](/assets/img/webpack.png)
 
 ### 安装
-```html
+```
 npm init
 npm install --save-dev webpack
 webpack ./src/entry.js -o ./dist/bundle.js 高版本需要这样使用
@@ -35,4 +35,3 @@ module.exports = {
     devServer: {}
 };
 ```
-<sidebarnav/>
