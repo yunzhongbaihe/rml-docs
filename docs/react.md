@@ -38,3 +38,15 @@ export default App;
 ```jsx harmony
 this.setState({'需要改变值的名称':'新值'});
 ```
+> 父子组件的传值
+```jsx harmony
+// 父组件
+<ChildComp content="这是来自父组件的信息"/>
+// 子组件 
+import React,{Component} from 'react';
+class ChildComp extends Component{
+    render(){
+        return (<div>{this.props.content}</div>)
+    }
+}
+```
