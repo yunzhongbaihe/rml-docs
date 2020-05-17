@@ -7,6 +7,21 @@ body
   margin 0 auto
   font-family: 'Fira Code Light', 'Courier New', Courier, monospace;
 
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
 a
   color: #0088EE
 
@@ -33,7 +48,14 @@ a
     width 100%;
   }
 
-@media (max-width: 1200px)
+  .sidebar-button {
+    display: block;
+  }
+  
+  .theme-container.sidebar-open .sidebar-button {
+    color: #0088EE;
+  }
+
   .theme-container.sidebar-open .sidebar {
     display: block
     transform: translateX(0);
@@ -41,6 +63,10 @@ a
 
   .theme-container.sidebar-open .page {
     width calc(100% - 200px);
+  }
+
+  .home-link {
+    margin-left: 40px;
   }
 
 .navbar
@@ -109,3 +135,10 @@ a.sidebar-link.active
   max-width: 100%
   box-sizing: border-box
   padding: 0 1rem
+
+// 首页按钮
+.home .hero .action-button,
+.home .hero .action-button:hover
+  padding: 5px 10px;
+  background-color: #0088EE;
+  border: 0;
