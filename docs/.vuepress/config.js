@@ -28,12 +28,21 @@ module.exports = {
 		// 侧边栏
 		sidebar: [
 			['/webpack', 'Webpack'],
-			['/react', 'React'],
+            ['/react', 'React'],
+            {
+                title: 'vue',
+				path: '/vue/',
+				collapsable: false,
+				sidebarDepth: 1,
+				children: [
+					'/vue/code'
+				]
+            },
 			{
-				title: '弹框',   // 必要的
-				path: '/layer/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-				collapsable: false, // 可选的, 默认值是 true,
-				sidebarDepth: 1,    // 可选的, 默认值是 1
+				title: '弹框',
+				path: '/layer/',
+				collapsable: false,
+				sidebarDepth: 1,
 				children: [
 					'/layer/code'
 				]
