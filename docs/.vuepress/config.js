@@ -21,8 +21,8 @@ module.exports = {
 		// logo: '/assets/img/logo.png',
 		// 导航栏
 		nav: [
-			{text: '主页', link: '/'},
-			{text: '开发', link: '/develop'},
+			{text: '首页', link: '/'},
+			{text: '笔记', link: '/note'},
 			// {text: '关于我', link: '/about'},
 		],
 		// 侧边栏
