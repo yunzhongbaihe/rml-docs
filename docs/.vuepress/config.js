@@ -2,7 +2,7 @@ const moment = require('moment');
 moment.locale('zh-cn');
 
 module.exports = {
-	title: '云中白鹤',
+	// title: '云中白鹤',
 	description: '学而时习之，不亦说乎',
 	base: '/', // 这是部署到github相关的配置
 	markdown: {

@@ -1,7 +1,12 @@
 *
   margin: 0
   padding: 0
-  
+
+body
+  min-width 1200px
+  margin 0 auto
+  font-family: 'Fira Code Light', 'Courier New', Courier, monospace;
+
 a
   color: #0088EE
 
@@ -9,11 +14,34 @@ a
   padding: 2rem 1rem
   max-width 100%
 
+//  左侧导航
 .sidebar
   width: 200px
 
+//  主体部分
 .page
-  padding-left: 200px
+  float: right
+  padding-left: 0
+  width calc(100% - 200px)
+
+@media (max-width: 1200px)
+  .sidebar {
+    display: none;
+  }
+
+  .page {
+    width 100%;
+  }
+
+@media (max-width: 1200px)
+  .theme-container.sidebar-open .sidebar {
+    display: block
+    transform: translateX(0);
+  }
+
+  .theme-container.sidebar-open .page {
+    width calc(100% - 200px);
+  }
 
 .navbar
   padding 0.75rem 1rem
@@ -22,9 +50,6 @@ a
 .home
   padding: 60px 1rem 50px
   max-width 100%
-
-body
-  font-family: 'Fira Code Light', 'Courier New', Courier, monospace;
 
 .sidebar-heading
   padding-top: 0
@@ -72,10 +97,6 @@ a.sidebar-link.active
 .theme-default-content > h1:first-child
   margin-bottom: 0 !important
   line-height: 40px
-
-.navbar .links
-  left: 1rem
-  padding-left: 0
 
 .active-sign
   padding-left: 10px !important
