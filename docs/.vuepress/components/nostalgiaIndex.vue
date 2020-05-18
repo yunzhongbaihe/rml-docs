@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<img src="/rml-docs/assets/img/nostalgia.jpg" alt="">
+	<div style="text-align:center;">
+		<img src="/rml-docs/assets/img/xiangchou.png" alt="乡愁"/>
 	</div>
 </template>
 <script>
