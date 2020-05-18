@@ -1,5 +1,5 @@
 <template>
-    <div class="features">
+    <!-- <div class="features">
         <div class="feature">
             <h2>浪淘沙</h2>
             <p>莫道谗言如浪深，</p>
@@ -28,6 +28,14 @@
             <p>少壮不努力，</p>
             <p>老大徒伤悲。</p>
         </div>
+    </div> -->
+    <div style="text-align:center;">
+        <div>
+            <img src="/rml-docs/assets/img/dadaozhijian.png" width="600" height="200" alt="大道至简"/>
+        </div>
+        <div>
+            <img src="/rml-docs/assets/img/tiandaochouqin.png" width="600" height="200" alt="天道酬勤"/>
+        </div>
     </div>
 </template>
 <script>
@@ -43,5 +51,18 @@
         text-align center
 
     .home .feature
-        max-width: inherit
+        max-width: inherit,
+		
+	// .home_text
+	// 	display flex
+	// 	justify-content: space-around;
+	// 	align-items: center;
+	// 	height: 100px;
+	// 	font-size: 8rem;
+	// 	font-weight: bold;
+	// 	height 100%
+		
+	// .theme-default-content.custom
+	// 	height calc(100% - 60px + 5.1rem - 150px - 50px)
+	// 	border-top 1px solid #eaecef
 </script>
