@@ -13,3 +13,9 @@ this is a tip
 ::: danger 警告
 this is a tip
 :::
+### 检查你电脑上是否有SSH Key
+- ~/.ssh
+- 存在：`bash: /c/Users/.../.ssh: Is a directory`
+- 不存在：`bash: /c/Users/.../.ssh: No such file or directory`
+### 创建SSH Key
+- ssh-keygen -t rsa -C "你的邮箱"
