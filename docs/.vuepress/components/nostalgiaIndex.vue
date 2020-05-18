@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="/assets/img/nostalgia.jpg" alt="">
+        <img src="/rml-docs/assets/img/nostalgia.jpg" alt="">
     </div>
 </template>
 <script>

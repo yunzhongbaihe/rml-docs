@@ -5,7 +5,7 @@
 ### 认识WebPack的作用
 <div style="height:10px;"></div>
 
-![webpack](/assets/img/webpack.png)
+![webpack](/rml-docs/assets/img/webpack.png)
 
 ### 安装
 ```
@@ -16,7 +16,7 @@ webpack ./src/entry.js -o ./dist/bundle.js 高版本需要这样使用
 ### 目录结构
 <div style="height:10px;"></div>
 
-![目录结构](/assets/img/webpack01.jpg)
+![目录结构](/rml-docs/assets/img/webpack01.jpg)
 ### webpack.config.js
 ```javascript
 const path = require('path');
