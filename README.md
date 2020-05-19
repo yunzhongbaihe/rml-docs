@@ -20,3 +20,6 @@ this is a tip
 ### 创建SSH Key
 - ssh-keygen -t rsa -C "你的邮箱"
 ### [字体转换器](http://www.diyiziti.com/) - 印章篆体字体 - 100px - 600*200
+### 引入存在的文件作为代码片段
+- `<<< @/docs/.vuepress/public/assets/js/jquery.layer.js`
+- @：为当前项目所在的位置，绝对路径
