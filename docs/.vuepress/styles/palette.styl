@@ -3,9 +3,9 @@
   padding: 0
 
 body
-  min-width 1200px
-  margin 0 auto
-  font-family: 'Fira Code Light', 'Courier New', Courier, monospace;
+  min-width 1200px !important
+  margin 0 auto !important
+  font-family: 'Fira Code Light', 'Courier New', Courier, monospace !important
 
 
 *::-webkit-scrollbar {
@@ -26,18 +26,18 @@ a
   color: #0088EE
 
 .theme-default-content:not(.custom)
-  padding: 2rem 1rem
-  max-width 100%
+  padding: 2rem 1rem !important
+  max-width 100% !important
 
 //  左侧导航
 .sidebar
-  width: 200px
+  width: 200px !important
 
 //  主体部分
 .page
-  float: right
-  padding-left: 0
-  width calc(100% - 200px)
+  float: right !important
+  padding-left: 0 !important
+  width calc(100% - 200px) !important
 
 @media (max-width: 1200px)
   .sidebar {
@@ -149,5 +149,5 @@ a.sidebar-link.active
   border: 0;
 	
 html,body,#app,.theme-container
-	height 100%
-	box-sizing border-box
+	height 100% !important
+	box-sizing border-box !important
