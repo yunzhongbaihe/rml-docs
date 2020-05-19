@@ -39,15 +39,15 @@ module.exports = {
 					'/vue/code'
 				]
             },
-			{
-				title: '弹框',
-				path: '/layer/',
-				collapsable: false,
-				sidebarDepth: 1,
-				children: [
-					'/layer/code'
-				]
-			},
+			// {
+			// 	title: '弹框',
+			// 	path: '/layer/',
+			// 	collapsable: false,
+			// 	sidebarDepth: 1,
+			// 	children: [
+			// 		'/layer/code'
+			// 	]
+			// },
 			{
 				title: 'Electron',
 				path: '/electron/',
