@@ -7,7 +7,7 @@ module.exports = {
 	base: '/rml-docs/', // 这是部署到github相关的配置
 	markdown: {
 		lineNumbers: true, // 代码库显示行数
-		anchor: {permalink: false, permalinkBefore: false, permalinkSymbol: ''},
+		anchor: {permalink: false, permalinkBefore: false, permalinkSymbol: ''}, // 取消锚点显示
 	},
 	plugins: {
 		'@vuepress/back-to-top': true,
@@ -28,6 +28,15 @@ module.exports = {
 		],
 		// 侧边栏
 		sidebar: [
+            {
+                title: 'JavaScript',
+                path: '/js/',
+                collapsable: false,
+                sidebarDepth: 1,
+                children: [
+                    '/js/module'
+                ]
+            },
 			['/webpack', 'Webpack'],
             ['/react', 'React'],
             {
