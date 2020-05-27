@@ -15,7 +15,7 @@ module.exports = {
 		'@vuepress/active-header-links': true,
 	},
 	themeConfig: {
-		lastUpdated: '更新时间：',
+		lastUpdated: '更新时间',
 		search: false, // 禁用默认的搜索框
 		// 图标
 		// logo: '/assets/img/logo.png',
