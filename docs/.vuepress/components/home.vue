@@ -2,7 +2,7 @@
     <div style="text-align:center;">
         <div><img src="/rml-docs/assets/img/dadaozhijian.png" width="300" alt="大道至简"/></div>
         <div><img src="/rml-docs/assets/img/tiandaochouqin.png" width="300" alt="天道酬勤"/></div>
-        <a href="/note" class="now">现在出发</a>
+        <a href="/rml-docs/note.html" class="now">现在出发</a>
     </div>
 </template>
 <script>
