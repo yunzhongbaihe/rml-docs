@@ -23,7 +23,7 @@ module.exports = {
 		nav: [
 			{text: '首页', link: '/'},
 			{text: '笔记', link: '/note'},
-			{text: '乡愁', link: '/nostalgia'},
+			// {text: '乡愁', link: '/nostalgia'},
 			// {text: '关于我', link: '/about'},
 		],
 		// 侧边栏
@@ -37,6 +37,15 @@ module.exports = {
 				sidebarDepth: 1,
 				children: [
 					'/vue/code'
+				]
+            },
+            {
+                title: 'node',
+				path: '/node/',
+				collapsable: false,
+				sidebarDepth: 1,
+				children: [
+					'/node/express'
 				]
             },
 			// {
