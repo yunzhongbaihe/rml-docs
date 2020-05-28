@@ -1,11 +1,12 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var ejs = require('ejs');
-var indexRouter = require('./routes/index');
-var app = express();
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let ejs = require('ejs');
+let indexRouter = require('./routes/index');
+let app = express();
+let multer = require('multer');
 
 // 视图模板设置
 app.engine('.html', ejs.__express); // 设置视图引擎后缀，为.html
@@ -16,9 +17,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
+// 设置静态文件目录路径，例如这样的目录结构public/images/1.png，在设置img标签的src值的时候可以直接这样写src="/images/1.png"
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+// multer 用于解析post文件 multipart/form-data
+// body-parser 用于解析post数据 application/x-www.form-urlencoded
+app.use(multer({dest: './public/upload'}).any());
 
 // 捕获404并转发到错误处理程序
 app.use(function(req, res, next){

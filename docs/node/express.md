@@ -6,10 +6,11 @@ npm install express --save
 ```
 ### 2、开始第一个express项目
 ```text
-express `项目名称`
-cd `项目名称`
-npm install
-npm start
+1、express `项目名称`
+2、cd `项目名称`
+3、npm install
+4、npm start
+5、访问 http://localhost:3000
 ```
 ### 3、目录以及文件说明
 ![express目录](/rml-docs/assets/img/expressCatalogue.jpg)
@@ -22,3 +23,8 @@ npm start
 ```
 ### 4、app.js文件详解
 <<< @/docs/.vuepress/public/assets/js/node/app.js
+### 5
+```text
+1、__dirname：当前文件所在的位置，例如(E:\SOFTCENTER\rml-express-node\routes)
+2、__filename：当前文件的路径地址，例如(E:\SOFTCENTER\rml-express-node\routes\index.js)
+```
