@@ -33,9 +33,7 @@ module.exports = {
                 path: '/js/',
                 collapsable: false,
                 sidebarDepth: 1,
-                children: [
-                    '/js/module'
-                ]
+                children: ['/js/module', '/js/promise',]
             },
 			['/webpack', 'Webpack'],
             ['/react', 'React'],
