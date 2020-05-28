@@ -4,6 +4,10 @@ const moment = require('moment');
 module.exports = {
 	title: '云中白鹤',
 	description: '学而时习之，不亦说乎',
+	head: [
+		['link', {rel: 'icon', href: '/assets/img/logo.png'}],
+		['meta', {name: 'Keywords', content: '学习,笔记,进步,云中白鹤,yunzhongbaihe,YunZhongBaiHe',}],
+	],
 	base: '/rml-docs/', // 这是部署到github相关的配置
 	markdown: {
 		lineNumbers: true, // 代码库显示行数
