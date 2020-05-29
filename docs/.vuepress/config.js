@@ -35,8 +35,20 @@ module.exports = {
                 sidebarDepth: 1,
                 children: ['/js/module', '/js/promise',]
             },
-			['/webpack', 'Webpack'],
-            ['/react', 'React'],
+            {
+                title: 'Webpack',
+                path: '/webpack/',
+                collapsable: false,
+                sidebarDepth: 1,
+                children: ['/webpack/code',]
+            },
+            {
+                title: 'React',
+                path: '/react/',
+                collapsable: false,
+                sidebarDepth: 1,
+                children: ['/react/code',]
+            },
             {
                 title: 'vue',
 				path: '/vue/',

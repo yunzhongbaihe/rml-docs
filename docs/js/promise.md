@@ -26,3 +26,70 @@ class ParamError extends Error{
 }
 console.log(new ParamError('参数错误').message);
 ```
+### 3、批量获取数据(Promise.all)
+```javascript
+const promise1 = new Promise((resolve, reject) => {
+    resolve('第一个异步');
+}).catch(error => { // 如果在该处处理的错误，此时返回的promise为解决状态
+    console.log(error);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+    resolve('第二个异步');
+});
+
+Promise.all([promise1, promise2])
+    .then(result => {
+        // ["第一个异步", "第二个异步"]
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+```
+### 4、把多个promise结果收集起来(Promise.allSettled)
+```javascript
+const promise1 = new Promise((resolve, reject) => {
+    resolve('第一个异步');
+}).catch(error => { // 如果在该处处理的错误，此时返回的promise为解决状态
+    console.log(error);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+    reject('第二个异步');
+});
+
+Promise.allSettled([promise1, promise2])
+    .then(result => {
+        // [{status: "fulfilled", value: "第一个异步"},{status: "rejected", reason: "第二个异步"}]
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+```
+### 5、后台请求超时处理(Promise.race)获取的是用时最短的promise数据
+```javascript
+const promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('第一个异步');
+    }, 3000);
+}).catch(error => { // 如果在该处处理的错误，此时返回的promise为解决状态
+    console.log(error);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('第二个异步');
+    }, 300);
+});
+
+Promise.race([promise1, promise2])
+    .then(result => {
+        // 第二个异步
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+```

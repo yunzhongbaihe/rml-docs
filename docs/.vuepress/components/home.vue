@@ -1,9 +1,9 @@
 <template>
     <div>
         <div style="text-align:center;">
-            <div><img src="/rml-docs/assets/img/dadaozhijian.png" width="300" alt="大道至简"/></div>
-            <div><img src="/rml-docs/assets/img/tiandaochouqin.png" width="300" alt="天道酬勤"/></div>
             <a href="/rml-docs/note.html" class="now">现在出发</a>
+            <div style="margin-bottom:30px;"><img src="/rml-docs/assets/img/dadaozhijian.png" width="330" height="80" alt="大道至简"/></div>
+            <div><img src="/rml-docs/assets/img/tiandaochouqin.png" width="330" height="80" alt="天道酬勤"/></div>
         </div>
         <div class="footer">
             <span>安徽·黄山·歙县</span>
@@ -20,7 +20,8 @@
 <style scoped>
     .now {
         display: inline-block;
-        margin-top: 50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
         width: 120px;
         line-height: 50px;
         background-color: #0088ee;

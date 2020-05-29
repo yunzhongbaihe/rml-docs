@@ -1,4 +1,4 @@
-# React
+# 具体内容
 ::: tip 三大体系
 <div style="height:5px;"></div>
 
@@ -18,7 +18,7 @@ npm start // 启动项目
 ### 文件说明
 > /src/index.js 入口文件
 ```jsx harmony
-import React from 'react';
+import React from 'docs/react/react';
 import ReactDom from 'react-dom';
 import App from './App.js';
 ReactDom.render(<App/>, document.getElementById('root'));
@@ -26,7 +26,7 @@ ReactDom.render(<App/>, document.getElementById('root'));
 > /src/App.js 组件文件
 ```jsx harmony
 // Fragment：文档碎片
-import React, {Component,Fragment} from 'react';
+import React, {Component,Fragment} from 'docs/react/react';
 class App extends Component{
    render(){
    	    return (<Fragment><div>Hello World</div></Fragment>);
@@ -43,7 +43,7 @@ this.setState({'需要改变值的名称':'新值'});
 // 父组件
 <ChildComp content="这是来自父组件的信息"/>
 // 子组件 
-import React,{Component} from 'react';
+import React,{Component} from 'docs/react/react';
 class ChildComp extends Component{
     render(){
         return (<div>{this.props.content}</div>)
