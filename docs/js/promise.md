@@ -9,8 +9,20 @@ new Promise((resolve, reject) => {
     resolve('操作成功');
 }).then(value => {
     console.log('成功的业务处理');
-}, reason => {
-    console.log('拒绝的业务处理');
+}).finally(() => {
+    console.log('永远会执行');
+}).catch(error => {
+    console.log('在这里捕捉错误');
 });
 // 后面的then是对前一个promise的处理
+```
+### 2、定制错误信息
+```javascript
+class ParamError extends Error{
+    constructor(msg){
+        super(msg);
+        this.name = 'ParamError';
+    }
+}
+console.log(new ParamError('参数错误').message);
 ```
