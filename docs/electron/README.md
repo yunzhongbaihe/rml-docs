@@ -1,5 +1,5 @@
 # electron
-```markdown
+```md
 1、目录结构
 
 |-- rml-electron-demo

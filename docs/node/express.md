@@ -2,19 +2,19 @@
 ### 基于`Node.js`平台，快速、开放、极简的Web开发框架
 ### [API文档地址](http://nodejs.cn/api/)
 ### 1、使用express框架
-```text
+```sh
 npm install express --save
 ```
 ### 2、开始第一个express项目
-```markdown
-1、express `项目名称`
-2、cd `项目名称`
-3、npm install
-4、npm start
-5、访问 `http://localhost:3000`
+```sh
+express `项目名称`
+cd `项目名称`
+npm install
+npm start
+访问 `http://localhost:3000`
 ```
 ### 3、目录以及文件说明
-```markdown
+```md
 |-- rml-express-node
     |-- app.js  `程序main文件`
     |-- package-lock.json
@@ -34,7 +34,7 @@ npm install express --save
 ### 4、app.js文件详解
 <<< @/docs/.vuepress/public/assets/js/node/app.js
 ### 5、模块说明
-```markdown
+```md
 1、当前文件所在的位置：`__dirname`，例如E:\SOFTCENTER\rml-express-node\routes
 2、当前文件的路径地址：`__filename`，例如E:\SOFTCENTER\rml-express-node\routes\index.js
 3、异步读取文件：`fs.readFile(path[, options], callback)`，回调参数(err, data)其中data是文件的内容

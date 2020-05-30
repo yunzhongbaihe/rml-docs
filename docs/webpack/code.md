@@ -12,7 +12,7 @@ npm install --save-dev webpack
 webpack ./src/entry.js -o ./dist/bundle.js 高版本需要这样使用
 ```
 ### 目录结构
-```markdown
+```md
 |-- rml-webpack-demo
     |-- dist `打包后文件目录`
     |-- node_modules
