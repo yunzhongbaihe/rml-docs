@@ -1,6 +1,16 @@
 # electron
-### 主要进程：`./main.js`
-### 渲染进程：`./render/index.js`
-### 项目启动：`electron .`
-### 目录结构：
-<img src="/rml-docs/assets/img/electron.jpg" style="position:relative;top:-1.4em;margin-left:7em;"/>
+```markdown
+1、目录结构
+
+|-- rml-electron-demo
+    |-- main
+    |-- node_modules
+    |-- render
+    |   |-- index.js `渲染进程文件`
+    |-- index.html
+    |-- main.js `主进程文件`
+    |-- package.json
+    |-- package-lock.json
+
+2、启动项目 `electron .`
+```
