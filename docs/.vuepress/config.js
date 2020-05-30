@@ -29,32 +29,32 @@ module.exports = {
 		// 侧边栏
 		sidebar: [
             {
-                title: 'JavaScript',
+                title: 'js',
                 path: '/js/',
                 collapsable: false,
                 sidebarDepth: 1,
                 children: ['/js/module', '/js/promise',]
             },
             {
-                title: 'Webpack',
+                title: 'webpack',
                 path: '/webpack/',
                 collapsable: false,
                 sidebarDepth: 1,
                 children: ['/webpack/code',]
             },
             {
-                title: 'React',
+                title: 'react',
                 path: '/react/',
                 collapsable: false,
                 sidebarDepth: 1,
-                children: ['/react/code',]
+                children: ['/react/code', '/react/redux',]
             },
             {
                 title: 'vue',
 				path: '/vue/',
 				collapsable: false,
 				sidebarDepth: 1,
-				children: ['/vue/code',]
+				children: ['/vue/code', '/vue/vuex',]
             },
             {
                 title: 'node',
@@ -64,7 +64,7 @@ module.exports = {
 				children: ['/node/express',]
             },
 			{
-				title: 'Electron',
+				title: 'electron',
 				path: '/electron/',
 				collapsable: false,
 				sidebarDepth: 1,
