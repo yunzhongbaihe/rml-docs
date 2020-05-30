@@ -3,20 +3,25 @@
 <div style="height:10px;"></div>
 
 ### 认识WebPack的作用
-<div style="height:10px;"></div>
-
-![webpack](/rml-docs/assets/img/webpack.png)
+<div style="margin-top:10px;"><img src="/rml-docs/assets/img/webpack.png"/></div>
 
 ### 安装
-```
+```sh
 npm init
 npm install --save-dev webpack
 webpack ./src/entry.js -o ./dist/bundle.js 高版本需要这样使用
 ```
 ### 目录结构
-<div style="height:10px;"></div>
-
-![目录结构](/rml-docs/assets/img/webpack01.jpg)
+```markdown
+|-- rml-webpack-demo
+    |-- dist `打包后文件目录`
+    |-- node_modules
+    |-- src
+    |   |-- entery.js `入口文件`
+    |-- package.json
+    |-- package-lock.json
+    |-- webpack.config.js `webpack配置文件`
+```
 ### webpack.config.js
 ```javascript
 const path = require('path');
