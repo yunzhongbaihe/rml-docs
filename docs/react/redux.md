@@ -3,7 +3,7 @@
 ```md
 state old state ---> new state
 action
-reducer 春函数 返回 new state
+reducer 纯函数 返回 new state
 state => action => reducer => new state
 ```
 ```js
