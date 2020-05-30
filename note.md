@@ -106,5 +106,8 @@ this is a tip
         "yarn.lock": true,
         "package-lock.json": true,
     },
+    "git.ignoredRepositories": [
+        ".idea,.iml"
+    ],
 }
 ```
