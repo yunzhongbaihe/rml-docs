@@ -24,6 +24,7 @@ this is a tip
 - `<<< @/文件夹名称/文件名称`
 - @/：为当前项目所在的位置，绝对路径，例如：`E:\shop\`
 ### [改图宝](https://www.gaitubao.com/)
+### 魏碑字体生成(https://yanti.laoxiezi.com/) - 华文新魏 - 85px - #FF0000 - #FFFFFF
 ### vscode(settings.json)
 ```json
 {

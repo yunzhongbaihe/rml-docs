@@ -1,4 +1,4 @@
-# Promise
+# promise
 ### 1、写法
 ```javascript
 // pending 准备阶段
