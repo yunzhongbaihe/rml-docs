@@ -20,9 +20,10 @@ let initState = {
     users: [],
 };
 
-// reducer 返回新的状态
+// reducer 返回新的状态，可以接收state，但是绝不可以修改state
 function getUsers(state, action){
     state = state || initState;
+	const newState = JSON.parse(JSON.stringify(state));
     switch(action.type){
         case ActionTypes.ALL:
             return Object.assign({}, state, {
