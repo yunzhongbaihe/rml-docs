@@ -50,3 +50,28 @@ class ChildComp extends Component{
     }
 }
 ```
+> 组件的基本结构
+```jsx harmony
+import React from 'react';
+import './MyButton.css'; // 引入样式
+
+// 定义MyButton类继承React.Component
+class MyButton extends React.Component{
+	
+    handleClick = () => {
+        console.log('MyButton-handleClick');
+        const {handleAppBtnClick} = this.props;
+        if(typeof handleAppBtnClick == 'function'){
+            handleAppBtnClick();
+        }
+    };
+
+    render(){
+        return (
+            <button className="myButton" onClick={this.handleClick}>MyButton</button>
+        );
+    }
+}
+
+export default MyButton; // 导出MyButton
+```
