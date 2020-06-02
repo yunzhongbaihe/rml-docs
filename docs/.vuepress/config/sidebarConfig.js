@@ -25,14 +25,14 @@ const sideBars = [
 		path: '/react/',
 		collapsable: false,
 		sidebarDepth: 1,
-		children: ['/react/code', '/react/redux', '/react/router', '/vue/axios']
+		children: ['/react/code', '/react/redux', '/react/router',]
 	},
 	{
 		title: 'vue',
 		path: '/vue/',
 		collapsable: false,
 		sidebarDepth: 1,
-		children: ['/vue/code', '/vue/vuex', '/vue/comp', '/vue/router']
+		children: ['/vue/code', '/vue/vuex', '/vue/comp', '/vue/router', '/vue/axios']
 	},
 	{
 		title: 'node',
