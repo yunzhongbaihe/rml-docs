@@ -25,7 +25,7 @@ const sideBars = [
 		path: '/react/',
 		collapsable: false,
 		sidebarDepth: 1,
-		children: ['/react/code', '/react/redux', '/react/router']
+		children: ['/react/code', '/react/redux', '/react/router', '/vue/axios']
 	},
 	{
 		title: 'vue',
