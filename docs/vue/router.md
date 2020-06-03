@@ -54,3 +54,81 @@ const router = new VueRouter({
 });
 new Vue({router: router}).$mount('#app');
 ```
+### 3、路由守卫
+> 路由守卫
+```js
+import Vue from 'vue';
+import Router from 'vue-router';
+
+Vue.use(Router);
+
+const router = new Router({
+	routes: [
+		{path: '/', redirect: '/dashboard'},
+		{
+			path: '/dashboard', 
+			name: 'dashboard', 
+			component: Dashboard,
+			children: [
+				{path: '/dashboard', redirect: '/dashboard/home'},
+				{path: 'home', name: 'home', component: Home},
+				{path: 'mine', name: 'mine', component: Mine},
+			],
+			beforeEach(to, from, next){
+				// 这里操作局部路由守卫
+				next();
+			}
+		},
+		{path: '/login', name: 'login', component: Login},
+	]
+});
+
+// 全局前置守卫
+router.beforeEach({to, from, next} => {
+	if(to.path !== '/login'){
+		// 验证是否登录
+		if(window.isLogin){
+			next();
+		}else{
+			next(`/login?redirect=${to.path}`);
+		}
+	}
+	next();
+});
+
+// 全局后置守卫
+router.afterEach((to, from) => {
+	console.log('router.afterEach');
+});
+
+export default router;
+```
+### 4、组件内的路由钩子
+```js
+<script>
+	export default {
+		name: 'Mine',
+		beforeRouteEnter(to, from, next){
+			console.log('beforeRouteEnter => 进入之前调用');
+			next();
+		},
+		beforeRouteUpdate(to, from, next){
+			console.log('beforeRouteUpdate => 路由参数更新了');
+			next();
+		},
+		beforeRouteLeave(to, from, next){
+			console.log('beforeRouteLeave => 离开前调用');
+			next();
+		},
+	}
+</script>
+```
+### 5、路由懒加载
+```js
+const router = new Router({
+	routes: [
+		{path: '/', redirect: '/dashboard'},
+		{path: '/dashboard', name: 'dashboard', component: () => import('./views/Dashboard')},
+	]
+});
+```
