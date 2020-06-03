@@ -29,8 +29,13 @@ new Vue({router: router}).$mount('#app');
 ```vue
 <div id="app">
     <div>
+		<!-- http://127.0.0.1:8848/vuejs-demo/index1.html#/ebook?id=123 -->
         <router-link :to="{path:'/ebook',query:{id:'123'}}">电子书</router-link>
+		
+		<!-- http://127.0.0.1:8848/vuejs-demo/index1.html#/apple/456 -->
         <router-link to="/apple/456">苹果商城</router-link>
+		
+		<!-- http://127.0.0.1:8848/vuejs-demo/index1.html#/tomato -->
         <router-link :to="{name:'tomato',params:{id:'987'}}">西红柿</router-link>
     </div>
     <router-view></router-view>
@@ -76,8 +81,8 @@ const router = new Router({
 				{path: 'home', name: 'home', component: Home},
 				{path: 'mine', name: 'mine', component: Mine},
 			],
-			beforeEach(to, from, next){
-				// 这里操作局部路由守卫
+			// 路由独享的守卫
+			beforeEnter(to, from, next){
 				next();
 			}
 		},
@@ -110,9 +115,12 @@ export default router;
 <script>
 	export default {
 		name: 'Mine',
+		// 守卫 不能 访问 this，因为守卫在导航确认前被调用，因此即将登场的新组件还没被创建
 		beforeRouteEnter(to, from, next){
 			console.log('beforeRouteEnter => 进入之前调用');
-			next();
+			next(vm => { // 通过 `vm` 访问组件实例
+				console.log(vm);
+			});
 		},
 		beforeRouteUpdate(to, from, next){
 			console.log('beforeRouteUpdate => 路由参数更新了');
