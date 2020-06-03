@@ -3,6 +3,8 @@
 ```md
 router-link 路由入口
 router-view 路由出口
+$router VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，例如 push/replace/go
+$route 当前正在跳转的路由对象，可以获取 name/path/params/query 等
 ```
 ### 1、简单使用
 ```vue
