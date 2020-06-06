@@ -55,5 +55,12 @@ const sideBars = [
 		sidebarDepth: 1,
 		// children: ['',]
 	},
+	{
+		title: 'wechatMini',
+		path: '/wechatMiniProgram/',
+		collapsable: false,
+		sidebarDepth: 1,
+		// children: ['',]
+	},
 ];
 module.exports = sideBars.sort((a, b) => a.title.charCodeAt() - b.title.charCodeAt());
