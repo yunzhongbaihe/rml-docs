@@ -42,22 +42,22 @@ import axios from 'axios';
 // 根据环境变量进行接口区分
 switch(process.env.NODE_ENV){
 	case 'production':
-		axios.defaluts.baseURL = 'http://api.demo.com';
+		axios.defaults.baseURL = 'http://api.demo.com';
 		break;
 	case 'test':
-		axios.defaluts.baseURL = 'http://test.api.com';
+		axios.defaults.baseURL = 'http://test.api.com';
 		break;
 	default:
-		axios.defaluts.baseURL = 'http://localhost:3000';
+		axios.defaults.baseURL = 'http://localhost:3000';
 		break;
 };
 
-axios.defaluts.timeout = 10000; // 设置超时请求时间
-axios.defaluts.withCredentials = true; // 设置CORS跨域允许携带资源凭证
+axios.defaults.timeout = 10000; // 设置超时请求时间
+axios.defaults.withCredentials = true; // 设置CORS跨域允许携带资源凭证
 
 // 设置请求传递数据的格式
-// axios.defaluts.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-// axios.defaluts.transformRequest = data => qs.stringify(data);
+// axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+// axios.defaults.transformRequest = data => qs.stringify(data);
 
 // 设置请求拦截器
 axios.interceptors.request.use(config => {
@@ -68,7 +68,7 @@ axios.interceptors.request.use(config => {
 	return Promise.reject(error);
 });
 
-/* axios.defaluts.validateStatus = status => {
+/* axios.defaults.validateStatus = status => {
 	return /^(2|3)\d{2}$/.test(status);
 }; */
 

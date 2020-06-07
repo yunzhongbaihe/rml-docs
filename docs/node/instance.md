@@ -25,3 +25,50 @@ request({
     }
 });
 ```
+### 2、创建Excel文件
+```sh
+yarn add json2excel --save
+```
+```js
+const path = require('path');
+const json2excel = require('json2excel');
+
+function createExcel(){
+    var sheet1 = {
+        header: {
+            'bookname': 'Book_Name',
+            'bookid': 'Book_Id'
+        },
+        items: [
+            {
+                'bookname': '毛选',
+                'bookid': 1,
+            },
+            {
+                'bookname': '邓小平时代',
+                'bookid': 2,
+            },
+        ],
+        sheetName: '图书', // 表格名称
+    };
+
+    return new Promise((resolve, reject) => {
+        json2excel.j2e({
+            sheets: [sheet1],
+            filepath: path.resolve(__dirname, '../Excel/Book.xlsx'), // 注意此处的文件夹`Excel`必须先创建
+        }, error => {
+            if(error){
+                reject(error);
+            }else{
+                resolve(true);
+            }
+        });
+    });
+}
+
+createExcel().then(res => {
+    console.log(res)
+}).catch(error => {
+    console.log(error);
+});
+```
