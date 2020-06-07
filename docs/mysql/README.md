@@ -49,3 +49,18 @@
 退出数据库 quit
 关闭数据库 net stop mysql
 ```
+### 2、相关指令
+```md
+查看所有数据库
+	show DATABASES
+创建并且使用数据库
+	create database `数据库名称` charset utf8;
+	use `数据库名称`;
+删除数据库
+	drop database if exists `数据库名称`;
+导入外部SQL文件
+	mysql -u root -p < sql.sql
+	source sql.sql
+创建数据表
+	create table class (id int primary key auto_increment);
+```
