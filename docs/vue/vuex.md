@@ -21,6 +21,7 @@ const store = new Vuex.Store({
     state: {
         count: 1
     },
+    // 在组件中`computed`属性里使用`...mapGetters()`进行映射
     getters: {
         getCount(state){
             return state.count++;
@@ -34,6 +35,7 @@ const store = new Vuex.Store({
     // 例如 store.commit('changeCount');
     // 可以向 store.commit 传入额外的参数，即 mutation 的 载荷（payload）
     // 载荷应该是一个对象，这样可以包含多个字段并且记录的 mutation 会更易读
+    // 必须是同步函数，通过`commit`触发，在组件中`methods`属性里使用`...mapMutations()`进行映射
     mutations: {
         changeCount(state, payload) {
             state.count += payload;
@@ -45,6 +47,7 @@ const store = new Vuex.Store({
     // Action 通过 store.dispatch 方法触发
     // 例如 store.dispatch('changeCount')
     // Actions 支持同样的载荷方式和对象方式进行分发
+    // 通过`dispatch`触发，在组件中`methods`属性里使用`...mapActions()`进行映射
     actions: {
         changeCount({commit, state}, payload) {
             commit('changeCount');
@@ -52,3 +55,31 @@ const store = new Vuex.Store({
     },
 });
 ```
+### 4、在组件中进行映射
+```javascript
+import {mapGetters, mapMutations, mapActions} from "vuex";
+
+export default {
+    name: 'App',
+    mounted(){
+        
+        // `editBookId`没在`methods`中映射，所以需要这样子触发
+        this.$store.dispatch('editBookId', 123456789);
+        this.$store.commit('editBookId', 987654321);
+
+        // 在`methods`属性中进行映射后，只需要进行调用并且传递相关参数就可以
+        this.editBookId(123456789);
+
+    },
+    computed: {
+		// 注意`bookId`需要在`getters`属性中进行定义
+        ...mapGetters(['bookId']),
+    },
+    methods: {
+		// 注意`editBookId`需要在`mutations、actions`属性中进行定义
+        ...mapMutations(['editBookId']),
+        ...mapActions(['editBookId']),
+    }
+}
+```
+
