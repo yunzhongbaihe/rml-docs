@@ -62,5 +62,12 @@ const sideBars = [
 		sidebarDepth: 1,
 		// children: ['',]
 	},
+	{
+		title: 'interface',
+		path: '/interface/',
+		collapsable: false,
+		sidebarDepth: 1,
+		// children: ['',]
+	},
 ];
 module.exports = sideBars.sort((a, b) => a.title.charCodeAt() - b.title.charCodeAt());
