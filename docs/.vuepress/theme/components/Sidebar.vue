@@ -45,11 +45,10 @@
             }
         },
         created(){
-			this.defaultActive = sessionStorage.getItem('path') || '';
+			this.defaultActive = this.$route.path;
         },
         methods: {
 			onMenuItemClick(path){
-				sessionStorage.setItem('path', path);
 				this.defaultActive = path;
             },
 	        onSubmenuClick(path){
@@ -60,7 +59,6 @@
         watch: {
 			$route(to, from){
 				if(to.path === '/note.html'){
-				    sessionStorage.removeItem('path');
 				    this.defaultActive = '';
 					this.defaultOpeneds = [];
 				}
