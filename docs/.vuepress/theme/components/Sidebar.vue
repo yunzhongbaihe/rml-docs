@@ -38,15 +38,14 @@
 			return {
 				isCollapse: false
             }
-        },
-        mounted(){
-			console.log(this.items);
         }
 	}
 </script>
 
 <style lang="stylus">
     .sidebar {
+        width: 200px
+        overflow: hidden
         ul {
             padding 0
             margin 0
@@ -80,6 +79,17 @@
                 margin-top .75rem
             }
         }
+        .el-menu {
+            width: 215px
+            border-right: 0
+            height: 100%
+            overflow: hidden
+            overflow-y auto
+            .el-submenu__icon-arrow {
+                right: auto
+                left: 160px
+            }
+        }
     }
 
     @media (max-width: $MQMobile) {
@@ -94,12 +104,5 @@
                 padding 1rem 0
             }
         }
-    }
-
-    .el-menu {
-        border-right: 0
-        height: 100%
-        overflow: hidden
-        overflow-y auto
     }
 </style>
