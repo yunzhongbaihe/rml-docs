@@ -45,11 +45,11 @@
             }
         },
         created(){
-			this.defaultActive = window.sessionStorage.getItem('path') || '';
+			this.defaultActive = sessionStorage.getItem('path') || '';
         },
         methods: {
 			onMenuItemClick(path){
-				window.sessionStorage.setItem('path', path);
+				sessionStorage.setItem('path', path);
 				this.defaultActive = path;
             },
 	        onSubmenuClick(path){
@@ -60,7 +60,7 @@
         watch: {
 			$route(to, from){
 				if(to.path === '/note.html'){
-				    window.sessionStorage.removeItem('path');
+				    sessionStorage.removeItem('path');
 				    this.defaultActive = '';
 					this.defaultOpeneds = [];
 				}
