@@ -5,9 +5,10 @@
     //font-family: STXinwei !important;
 }
 
-body
+body {
     min-width 1200px !important
     margin 0 auto !important
+}
 
 code, kbd {
     font-size: 16px !important;
@@ -35,72 +36,66 @@ a
     padding: 2rem 1rem !important
     max-width 100% !important
 
-//  主体部分
-.page
-    float: right !important
-    padding-left: 0 !important
-    width calc(100% - 200px) !important
-
-@media (max-width: 1200px)
+@media (max-width: 1200px){
     .sidebar {
         display: none;
-    }
-
-    .page {
-        width 100%;
     }
 
     .sidebar-button {
         display: block;
     }
 
-    .theme-container.sidebar-open .sidebar-button {
-        color: #0088EE;
-    }
+    .theme-container.sidebar-open {
+        .sidebar-button {
+            color: #0088EE;
+        }
 
-    .theme-container.sidebar-open .sidebar {
-        display: block
-        transform: translateX(0);
-    }
-
-    .theme-container.sidebar-open .page {
-        width calc(100% - 200px);
+        .sidebar {
+            display: block
+        }
     }
 
     .home-link {
         margin-left: 40px;
     }
+}
 
-.width_100
+.width_100{
     width 100% !important
+}
 
-.navbar
+.navbar{
     padding 0.75rem 1rem
     height: 60px
+}
 
-.home
+.home{
     padding: 60px 1rem 50px
     max-width 100%
     height 100%
     box-sizing border-box
+}
 
-.sidebar-heading
+.sidebar-heading{
     padding-top: 0
     padding-bottom: 0
     line-height: 30px
     padding-left: 10px
     padding-right: 10px
+}
 
 .sidebar-heading.clickable.active,
-a.sidebar-link.active
+a.sidebar-link.active {
     color: #0088EE
     border-left-color: #0088EE
+}
 
-.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active
+.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active {
     color: #0088EE
     border-bottom-color: #0088EE
+}
 
-.home .footer
+.home .footer {
     position: fixed
     bottom: 0
     left: 0
@@ -108,51 +103,61 @@ a.sidebar-link.active
     width: 100%
     line-height: 49px
     background-color: #fff;
+}
 
-.sidebar > .sidebar-links > li:not(:first-child)
+.sidebar > .sidebar-links > li:not(:first-child) {
     margin-top: 0 !important
+}
 
-.sidebar > .sidebar-links
+.sidebar > .sidebar-links {
     padding: 10px 0 !important
+}
 
 .sidebar-group li {
     line-height: 30px
 }
 
-.sidebar-link
+.sidebar-link {
     display: block
     padding-top: 0 !important
     padding-bottom: 0 !important
     line-height: 30px !important
     padding-left: 2em !important
     padding-right: 0.5em !important
+}
 
-.theme-default-content > h1:first-child
+.theme-default-content > h1:first-child {
     margin-bottom: 0 !important
     line-height: 40px
+}
 
-.active-sign
+.active-sign {
     padding-left: 10px !important
+}
 
-#nprogress .bar
+#nprogress .bar {
     background: #0088EE
+}
 
-.page-edit
+.page-edit {
     width: 100%
     max-width: 100%
     box-sizing: border-box
     padding: 0 1rem
+}
 
 // 首页按钮
 .home .hero .action-button,
-.home .hero .action-button:hover
+.home .hero .action-button:hover {
     padding: 5px 10px;
     background-color: #0088EE;
     border: 0;
+}
 
-html, body, #app, .theme-container
+html, body, #app, .theme-container {
     height 100% !important
     box-sizing border-box !important
+}
 
 .site-name {
     color: transparent !important;
