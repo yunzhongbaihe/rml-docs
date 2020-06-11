@@ -32,7 +32,7 @@ const sideBars = [
 		path: '/vue/',
 		collapsable: false,
 		sidebarDepth: 1,
-		children: ['/vue/code', '/vue/vuex', '/vue/comp', '/vue/router', '/vue/axios']
+		children: ['/vue/code', '/vue/vuex', '/vue/comp', '/vue/router', '/vue/axios', '/vue/slot']
 	},
 	{
 		title: 'node',
