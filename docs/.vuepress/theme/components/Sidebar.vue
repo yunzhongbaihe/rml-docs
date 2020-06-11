@@ -44,7 +44,7 @@
 
 <style lang="stylus">
     .sidebar {
-        width: 200px
+        width: 200px !important
         overflow: hidden
         ul {
             padding 0
