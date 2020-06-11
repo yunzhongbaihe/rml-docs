@@ -8,14 +8,17 @@
             unique-opened
             :collapse-transition="false"
             router
+            :default-active="defaultActive"
+            :default-openeds="defaultOpeneds"
             background-color="#333744"
             text-color="#fff"
             active-text-color="#409EFF">
-            <el-submenu v-for="item in items" :key="item.title" :index="item.path">
+            <el-submenu v-for="item in items" :key="item.title" :index="item.path" @click="onSubmenuClick(item.path)">
                 <template slot="title">
                     <span>{{item.title}}</span>
                 </template>
-                <el-menu-item v-for="subItem in item.children" :key="subItem.key" :index="subItem.path">
+                <el-menu-item v-for="subItem in item.children" :key="subItem.key" :index="subItem.path"
+                              @click="onMenuItemClick(subItem.path)">
                     <template slot="title">
                         <span>{{subItem.title}}</span>
                     </template>
@@ -36,8 +39,32 @@
 		props: ['items'],
         data(){
 			return {
-				isCollapse: false
+				isCollapse: false,
+                defaultActive: '',
+				defaultOpeneds: []
             }
+        },
+        created(){
+			this.defaultActive = window.sessionStorage.getItem('path') || '';
+        },
+        methods: {
+			onMenuItemClick(path){
+				window.sessionStorage.setItem('path', path);
+				this.defaultActive = path;
+            },
+	        onSubmenuClick(path){
+				this.defaultOpeneds = [];
+				this.defaultOpeneds.push(path);
+            }
+        },
+        watch: {
+			$route(to, from){
+				if(to.path === '/note.html'){
+				    window.sessionStorage.removeItem('path');
+				    this.defaultActive = '';
+					this.defaultOpeneds = [];
+				}
+			}
         }
 	}
 </script>
