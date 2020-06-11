@@ -53,21 +53,21 @@ const sideBars = [
 		path: '/mysql/',
 		collapsable: false,
 		sidebarDepth: 1,
-		// children: ['',]
+		children: ['/mysql/note',]
 	},
 	{
-		title: 'wechatMini',
-		path: '/wechatMiniProgram/',
+		title: 'wechat-mini',
+		path: '/wechat-mini/',
 		collapsable: false,
 		sidebarDepth: 1,
-		// children: ['',]
+		children: ['/wechat-mini/note',]
 	},
 	{
 		title: 'interface',
 		path: '/interface/',
 		collapsable: false,
 		sidebarDepth: 1,
-		// children: ['',]
+		children: ['/interface/note',]
 	},
 ];
 module.exports = sideBars.sort((a, b) => a.title.charCodeAt() - b.title.charCodeAt());
