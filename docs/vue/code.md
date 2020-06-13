@@ -107,3 +107,19 @@ new Vue({
     }
 });
 ```
+### 6、sync修饰符
+```js
+// 子组件触发
+this.$emit('update:money', 9000);
+```
+```vue
+<!-- 父组件监听 -->
+<child-component
+    :money="money"
+    @update:money="money = $event">
+</child-component>
+```
+为了方便起见，这种模式提供有一个缩写，即 *`.sync`* 修饰符：
+```vue
+<child-component :money.sync="money"></child-component>
+```

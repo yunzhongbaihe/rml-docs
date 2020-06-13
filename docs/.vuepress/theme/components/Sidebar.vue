@@ -130,4 +130,14 @@
             }
         }
     }
+
+    .el-menu-item, .el-submenu__title,
+    .el-submenu .el-menu-item {
+        height: 45px
+        line-height: 45px
+    }
+
+    .el-menu-item.is-active {
+        background-color: #292C36 !important
+    }
 </style>
