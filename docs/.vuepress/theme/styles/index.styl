@@ -5,17 +5,44 @@
 @require './wrapper'
 @require './toc'
 
+*
+  margin: 0
+  padding: 0
+  font-family: "Roboto Mono", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace !important;
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
 html, body
-  padding 0
-  margin 0
+  height: 100%
   background-color #fff
 
 body
-  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  min-width 1200px
+  margin 0 auto
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 16px
   color $textColor
+  
+#app
+  height: 100%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+a
+  color: #0088EE
 
 .page
   padding-left $sidebarWidth
@@ -92,6 +119,8 @@ kbd
   border-bottom solid 0.25rem #ddd
   border-radius 0.15rem
   padding 0 0.15em
+  font-size 16px
+  letter-spacing: 1px;
 
 blockquote
   font-size 1rem
@@ -177,6 +206,7 @@ th, td
   padding .6em 1em
 
 .theme-container
+  height: 100%
   &.sidebar-open
     .sidebar-mask
       display: block
@@ -188,7 +218,6 @@ th, td
 
     .sidebar
       top 0
-
 
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar

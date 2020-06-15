@@ -96,6 +96,12 @@
                 font-size 1.1em
                 line-height 1.7
                 font-weight bold
+                display: block
+                padding-top: 0
+                padding-bottom: 0
+                line-height: 30px
+                padding-left: 2em
+                padding-right: 0.5em
             }
             & > li:not(:first-child) {
                 margin-top .75rem
@@ -132,5 +138,10 @@
     .el-submenu .el-menu-item {
         height: 45px
         line-height: 45px
+    }
+
+    .el-menu-item.is-active {
+        font-weight: bold
+        background-color: #ecf5ff
     }
 </style>
