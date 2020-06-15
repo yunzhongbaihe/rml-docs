@@ -29,7 +29,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0;
+        padding: 0 !important;
         height: calc(100% - 60px);
     }
 </style>
