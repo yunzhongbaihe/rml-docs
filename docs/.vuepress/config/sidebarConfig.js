@@ -11,7 +11,7 @@ const sideBars = [
 		path: '/js/',
 		collapsable: false,
 		sidebarDepth: 1,
-		children: ['/js/module', '/js/promise',]
+		children: ['/js/code', '/js/module', '/js/promise',]
 	},
 	{
 		title: 'webpack',
