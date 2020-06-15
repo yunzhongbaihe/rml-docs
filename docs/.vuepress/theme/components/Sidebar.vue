@@ -9,10 +9,7 @@
             :collapse-transition="false"
             router
             :default-active="defaultActive"
-            :default-openeds="defaultOpeneds"
-            background-color="#333744"
-            text-color="#fff"
-            active-text-color="#409EFF">
+            :default-openeds="defaultOpeneds">
             <el-submenu v-for="item in items" :key="item.title" :index="item.path" @click="onSubmenuClick(item.path)">
                 <template slot="title">
                     <span>{{item.title}}</span>
@@ -135,9 +132,5 @@
     .el-submenu .el-menu-item {
         height: 45px
         line-height: 45px
-    }
-
-    .el-menu-item.is-active {
-        background-color: #292C36 !important
     }
 </style>

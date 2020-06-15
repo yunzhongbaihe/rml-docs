@@ -123,3 +123,50 @@ this.$emit('update:money', 9000);
 ```vue
 <child-component :money.sync="money"></child-component>
 ```
+### 7、2.0响应式原理
+```js
+let oldArrayPrototype = Array.prototype;
+let proto = Object.create(oldArrayPrototype); // 继承
+// 函数劫持，把函数进行重写，内部继续调用老的方法
+['push', 'shift', 'unshift'].forEach(method => {
+    proto[method] = function(){
+        updateView();
+        oldArrayPrototype[method].call(this, ...arguments);
+    }
+});
+function observer(target){
+    if(typeof target !== 'object' || target == null){
+        return target;
+    }
+    // 拦截数组，给数组的方法进行重写
+    if(Array.isArray(target)){
+        Object.setPrototypeOf(target, proto);
+        // target.__proto__ = proto;
+    }
+    for(let key in target){
+        defineReactive(target, key, target[key]);
+    }
+}
+function defineReactive(target, key, value){
+    observer(value);
+    Object.defineProperty(target, key, {
+        get(){
+            return value;
+        },
+        set(newValue){
+            observer(newValue);
+            if(newValue !== value){
+                updateView();
+                value = newValue;
+            }
+        }
+    });
+}
+function updateView(){
+    console.log('更新视图');
+}
+let data = {name: 'zf'};
+observer(data);
+data.name = 'rml';
+console.log(data.name);
+```

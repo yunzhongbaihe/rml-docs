@@ -1,7 +1,9 @@
 <template>
     <div>
         <div style="text-align:center;">
-            <a href="/rml-docs/note.html" class="now">现在出发</a>
+            <el-button type="primary" size="middle"
+                       style="margin-bottom:50px;"
+                       @click="$router.push('/note.html')">现在出发</el-button>
             <div style="margin-bottom:30px;"><img src="/rml-docs/assets/img/dadaozhijian.png" width="330" height="80" alt="大道至简"/></div>
             <div><img src="/rml-docs/assets/img/tiandaochouqin.png" width="330" height="80" alt="天道酬勤"/></div>
         </div>
@@ -18,22 +20,6 @@
     }
 </script>
 <style scoped>
-    .now {
-        display: inline-block;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        width: 120px;
-        line-height: 50px;
-        background-color: #0088ee;
-        color: #fff;
-        border-radius: 4px;
-        font-weight: bold;
-    }
-
-    .now:active {
-        box-shadow: inset 0 0 3px 1px #003388;
-    }
-
     .footer {
         font-size: 0;
     }
