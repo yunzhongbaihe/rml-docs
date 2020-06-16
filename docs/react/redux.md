@@ -1,9 +1,9 @@
 # redux
 ```md
-Components      发起 `Action`
-Action          联系 `Store`
-Store           找到 更新 `Components`，未找到 联系 `Reducers`
-Reducers        找到 通知 `Store` 更新 `Components`
+Component       发起`Action`，通过`Reducer`，改变`state`
+Action
+Store
+Reducer         只能接收`state`，不能改变`state`
 ```
 ```js
 let redux = require('redux);
