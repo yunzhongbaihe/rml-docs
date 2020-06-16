@@ -1,11 +1,21 @@
 # 具体内容
-::: tip 三大体系
-<div style="height:5px;"></div>
 
-React.js 用于Web开发和组件的编写<br/>
-ReactNative 用于移动端开发<br/>
-ReactVR 用于虚拟现实技术的开发
-:::
+### 三大体系
+> React.js 用于Web开发和组件的编写 <br>
+  ReactNative 用于移动端开发 <br>
+  ReactVR 用于虚拟现实技术的开发 <br>
+
+### React.createElement
+> 根据指定的第一个参数创建一个React元素 <br>
+  React.createElement(type, [props], [...children])
+```js
+let Child1 = React.createElement('li', null, '子元素001');
+let Child2 = React.createElement('li', null, '子元素002');
+// 第三个参数可以分开也可以写成一个数组，例如 [child1, child2]
+let content = React.createElement('ul', {className:'teststyle'}, child1, child2);
+ReactDOM.render(content, document.getElementById('nodeId'));
+```
+
 ### 开发环境的搭建
 ```text
 npm install -g create-react-app // 官方脚手架

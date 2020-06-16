@@ -1,10 +1,9 @@
 # redux
-### 1、redux的组成
 ```md
-state old state ---> new state
-action
-reducer 纯函数 返回 new state
-state => action => reducer => new state
+Components      发起 `Action`
+Action          联系 `Store`
+Store           找到 更新 `Components`，未找到 联系 `Reducers`
+Reducers        找到 通知 `Store` 更新 `Components`
 ```
 ```js
 let redux = require('redux);
