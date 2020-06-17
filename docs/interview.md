@@ -39,10 +39,10 @@ textcodeRestStyle: true
 		async修饰的异步方法，需要等待await修饰的语句执行完毕
 		
 	4、vuex中常用的有
-        state
-        getters 在组件中 computed 属性里使用 ...mapGetters() 进行映射
-        actions 通过 dispatch 触发 是异步 在组件中 methods 属性里使用 ...mapActions() 进行映射
-        mutations 通过 commit 触发 是同步 在组件中 methods 属性里使用 ...mapMutations() 进行映射
+		state
+		getters 在组件中 computed 属性里使用 ...mapGetters() 进行映射
+		actions 通过 dispatch 触发 是异步 在组件中 methods 属性里使用 ...mapActions() 进行映射
+		mutations 通过 commit 触发 是同步 在组件中 methods 属性里使用 ...mapMutations() 进行映射
 	
 	5、在移动端中页面切换如何保持状态
 	
@@ -57,4 +57,9 @@ textcodeRestStyle: true
 	8、vue中computed与watch的区别
 		computed中依赖的数据进行改变后，会重新进行计算
 		watch可以监听一个数据变化，去影响多个数据
+	
+	9、http与https的区别
+		数据加密传输，是HTTP和HTTPS之间的本质性区别
+		访问HTTP网站的时候，会显示“不安全”字样的安全警告
+		搜索排名的提升，HTTPS网站比起HTTP网站在搜索排名中更有优势
 ```
