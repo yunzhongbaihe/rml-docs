@@ -1,7 +1,7 @@
 <template>
     <main class="page">
         <slot name="top"></slot>
-        <Content class="theme-default-content"></Content>
+        <Content :class="contentClass"></Content>
         <PageEdit></PageEdit>
         <PageNav v-bind="{sidebarItems}"></PageNav>
         <slot name="bottom"></slot>
@@ -14,7 +14,18 @@
 
 	export default {
 		components: {PageEdit, PageNav},
-		props: ['sidebarItems']
+		props: ['sidebarItems'],
+        computed: {
+	        contentClass(){
+		        const {frontmatter} = this.$page;
+	        	return [
+	        		'theme-default-content',
+                    {
+                    	'reset-code': frontmatter.textcodeRestStyle
+                    }
+                ]
+            }
+        },
 	}
 </script>
 
@@ -37,6 +48,29 @@
         .theme-container.sidebar-open{
             .page {
                 width calc(100% - 200px)
+            }
+        }
+    }
+
+    .theme-default-content {
+        &.reset-code {
+            .language-text {
+                background-color: #fff
+
+                &:after {
+                    border-right: 0
+                    background-color: #fff
+                }
+
+                code {
+                    color: #999
+                    border-bottom: 1px dashed #999
+                    letter-spacing 2px
+                }
+
+                .line-numbers-wrapper {
+                    color: #38f
+                }
             }
         }
     }
