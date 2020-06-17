@@ -1,6 +1,7 @@
 module.exports = [
 	{text: '首页', link: '/'},
 	{text: '笔记', link: '/note'},
+	{text: '面试', link: '/interview'},
 	{text: '悅听', link: '/blog.github.io/music/index.html', target: '_blank'},
 	{
 		text: '乡愁',

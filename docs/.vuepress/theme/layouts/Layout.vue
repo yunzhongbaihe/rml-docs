@@ -118,3 +118,10 @@
 		}
 	}
 </script>
+
+<style scoped>
+    /* 设置没有左侧目录的时候，主体的样式 */
+    .theme-container.no-sidebar .page {
+        width: 100%;
+    }
+</style>
