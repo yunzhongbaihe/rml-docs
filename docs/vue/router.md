@@ -31,10 +31,10 @@ new Vue({router: router}).$mount('#app');
     <div>
 		<!-- http://127.0.0.1:8848/vuejs-demo/index1.html#/ebook?id=123 -->
         <router-link :to="{path:'/ebook',query:{id:'123'}}">电子书</router-link>
-		
+
 		<!-- http://127.0.0.1:8848/vuejs-demo/index1.html#/apple/456 -->
         <router-link to="/apple/456">苹果商城</router-link>
-		
+
 		<!-- http://127.0.0.1:8848/vuejs-demo/index1.html#/tomato -->
         <router-link :to="{name:'tomato',params:{id:'987'}}">西红柿</router-link>
     </div>
@@ -45,16 +45,16 @@ new Vue({router: router}).$mount('#app');
 const router = new VueRouter({
 	routes: [
 		{
-			path: '/ebook', 
+			path: '/ebook',
 			component: {template: '<div>这里是：电子书，图书编号：{{this.$route.query.id}}</div>'},
 		},
 		{
-			path: '/apple/:id', 
+			path: '/apple/:id',
 			component: {template: '<div>这里是：苹果商城，产品编号：{{this.$route.params.id}}</div>'},
 		},
 		{
-			path: '/tomato', 
-			name:"tomato", 
+			path: '/tomato',
+			name:"tomato",
 			component: {template: '<div>这里是：西红柿，编号：{{this.$route.params.id}}</div>'},
 		},
 	]
@@ -73,8 +73,8 @@ const router = new Router({
 	routes: [
 		{path: '/', redirect: '/dashboard'},
 		{
-			path: '/dashboard', 
-			name: 'dashboard', 
+			path: '/dashboard',
+			name: 'dashboard',
 			component: Dashboard,
 			children: [
 				{path: '/dashboard', redirect: '/dashboard/home'},
@@ -141,4 +141,11 @@ const router = new Router({
 		{path: '/dashboard', name: 'dashboard', component: () => import('./views/Dashboard')},
 	]
 });
+```
+### 6、关于解决element-ui导航组件，点击同一个路由，控制台报错问题，在router/index.js文件中加入以下代码
+```js
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location){
+	return originalPush.call(this, location).catch(err => err)
+};
 ```

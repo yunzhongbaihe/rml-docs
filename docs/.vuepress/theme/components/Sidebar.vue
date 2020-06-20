@@ -8,14 +8,13 @@
             unique-opened
             :collapse-transition="false"
             router
-            :default-active="defaultActive"
-            :default-openeds="defaultOpeneds">
-            <el-submenu v-for="item in items" :key="item.title" :index="item.path" @click="onSubmenuClick(item.path)">
+            :default-openeds="defaultOpeneds"
+            :default-active="defaultActive">
+            <el-submenu v-for="item in items" :key="item.title" :index="item.path">
                 <template slot="title">
                     <span>{{item.title}}</span>
                 </template>
-                <el-menu-item v-for="subItem in item.children" :key="subItem.key" :index="subItem.path"
-                              @click="onMenuItemClick(subItem.path)">
+                <el-menu-item v-for="subItem in item.children" :key="subItem.key" :index="subItem.path">
                     <template slot="title">
                         <span>{{subItem.title}}</span>
                     </template>
@@ -38,20 +37,11 @@
 			return {
 				isCollapse: false,
                 defaultActive: '',
-				defaultOpeneds: []
+				defaultOpeneds: [],
             }
         },
         created(){
 			this.defaultActive = this.$route.path;
-        },
-        methods: {
-			onMenuItemClick(path){
-				this.defaultActive = path;
-            },
-	        onSubmenuClick(path){
-				this.defaultOpeneds = [];
-				this.defaultOpeneds.push(path);
-            }
         },
         watch: {
 			$route(to, from){
