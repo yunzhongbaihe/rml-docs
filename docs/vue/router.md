@@ -142,8 +142,9 @@ const router = new Router({
 	]
 });
 ```
-### 6、关于解决element-ui导航组件，点击同一个路由，控制台报错问题，在router/index.js文件中加入以下代码
+### 6、关于解决element-ui导航组件，点击同一个路由，控制台报错问题
 ```js
+// 在router/index.js文件中加入以下代码
 const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location){
 	return originalPush.call(this, location).catch(err => err)
