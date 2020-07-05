@@ -20,8 +20,9 @@
 		        const {frontmatter} = this.$page;
 	        	return [
 	        		'theme-default-content',
-                    {
-                    	'reset-code': frontmatter.textcodeRestStyle
+			        {
+			        	'reset-code': frontmatter.textcodeRestStyle,
+                        'hide-line-numbers': frontmatter.hideLineNumbersWrapper,
                     }
                 ]
             }
@@ -70,6 +71,20 @@
 
                 .line-numbers-wrapper {
                     color: #38f
+                }
+            }
+        }
+        &.hide-line-numbers {
+            .language-text {
+                margin: 1.5rem 0 0 0
+                padding: 0
+                font-weight: 600
+                line-height: 30px
+                .line-numbers-wrapper {
+                    display: none
+                }
+                &:after {
+                    display: none
                 }
             }
         }
