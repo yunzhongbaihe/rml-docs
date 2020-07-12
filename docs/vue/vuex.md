@@ -82,4 +82,38 @@ export default {
     }
 }
 ```
+### 5、命名空间
+```js
+const user = {
+	namespaced: true, // 命名空间，使用路径形式，例如：this.$store.commit('user/setname')
+	state: {
+		name: 'This is a uesr module'
+	},
+	getters: {
+		name: (state) => state.name,
+	},
+	mutations: {
+		setname(state){
+			state.name = 'hello user module';
+		}
+	},
+};
 
+// 定义仓库
+const store = new Vuex.Store({
+	state: {
+		msg: 'store msg',
+		count: 1
+	},
+	mutations: {
+		add(state){
+			state.count++;
+		}
+	},
+	actions: {},
+	// 模块
+	modules: {
+		user,
+	},
+});
+```
