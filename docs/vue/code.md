@@ -170,3 +170,24 @@ observer(data);
 data.name = 'rml';
 console.log(data.name);
 ```
+### 8、自定义指令
+```js
+// 调用
+// <el-input type="text" v-model="money" v-checkinput="{oldVal:money,setVal:newVal=>(money=newVal)}"></el-input>
+// 自定义指令，检测输入
+Vue.directive('checkinput', {
+	update(el, binding, vnode){
+		// value 指令的值，例如v-checkinput=“hello”，此时值为hello
+		// modifiers 指令后使用.连接的，例如v-checkinput.integer，此时值为{integer:true}
+		const directiveVal = binding.value;
+		let inputValue = directiveVal.oldVal;
+		inputValue = inputValue.replace(/[^\d.]/g, ''); // 清除“数字”和“.”以外的字符
+		inputValue = inputValue.replace(/\.{2,}/g, '.'); // 只保留第一个. 清除多余的
+		inputValue = inputValue.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+		// 此处控制的是如果没有小数点，首位不能为0，例如 01、02、03
+		inputValue && inputValue.indexOf('.') < 0 && (inputValue = inputValue * 1 + '');
+		// 调用更新model方法，setVal名称是固定写法
+		directiveVal.setVal(inputValue);
+	},
+});
+```
